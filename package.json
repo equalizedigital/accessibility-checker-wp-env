@@ -1,0 +1,14 @@
+{
+  "name": "accessibility-checker-wp-env",
+  "scripts": {
+    "init": "npm run start && ./wp-env/scripts/init.sh",
+    "reset": "npx wp-env clean all",
+    "start": "npx wp-env start",
+    "stop": "npx wp-env stop",
+    "postinstall": "patch-package"
+  },
+  "devDependencies": {
+    "@wordpress/env": "*",
+    "patch-package": "^8.0.0"
+  }
+}
