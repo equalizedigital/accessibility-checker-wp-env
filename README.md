@@ -4,7 +4,7 @@ License: GPLv2 or later
 
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This package is a customized version of wp-env used for development and testing of Accessibility Checker, Accessibility Checker Pro and Accessibility Checker Audit History.
+This package is a customized version of [wp-env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) used for development and testing of Accessibility Checker, Accessibility Checker Pro and Accessibility Checker Audit History.
 
 
 ### Description
