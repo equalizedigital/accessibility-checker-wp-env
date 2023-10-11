@@ -18,22 +18,24 @@ This package:
 
 
 ### Installation
-
-1. `cd` to the folder that contains the plugin
-2. `composer require --dev equalizedigital/accessibility-checker-wp-env`
-3. update `./wp-env/cfg/env.txt` with the accessibility-checker-pro license to use and rename the file `.env`
+Run `npm install` from the plugin folder.
 
 
 ### Settings
-.wp-env.json mappings expects this directory setup:
+1. The `accessibility-checker` `accessibility-checker-pro` `accessibility-checker-wp-env` folders are all expected to be stored under a common parent folder. If you use a different folder setup, you should override the `mappings` setting in `.wp-env.json`.
 
-  a-parent-folder/
+2. The webserver is configured for basic Auth by default (admin|password). You can override this by commenting these entries in `./.wp-env/cfg/htaccess.txt`:
 
-  a-parent-folder/accessibility-checker/
-  
-  a-parent-folder/accessibility-checker-pro/
-  
-  a-parent-folder/accessibility-checker-audit-checker/
+```#AuthName "Dialog prompt"
+#AuthType Basic
+#AuthUserFile /var/www/html/.htpasswd
+#Require valid-user
+```
 
-Update the `mappings` setting in `.wp-env.json` to match your directory setup.
+3. The `wp:init` script can automatically fill the Accessibility Checker Pro license key. To setup,
+update `./wp-env/cfg/env.txt` with the license to use and rename the file `.env`
+
+
+
+
 
