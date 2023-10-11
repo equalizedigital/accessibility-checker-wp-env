@@ -1,0 +1,13 @@
+{
+    "name": "equalizedigital/accessibility-checker-wp-env",
+    "description": "This package is a customized version of wp-env used for development and testing of Accessibility Checker, Accessibility Checker Pro and Accessibility Checker Audit History.",
+    "type": "library",
+    "license": "GPLv2 or later",
+    "authors": [
+        {
+            "name": "Matt Boone",
+            "email": "matt@boone.dev"
+        }
+    ],
+    "require": {}
+}
