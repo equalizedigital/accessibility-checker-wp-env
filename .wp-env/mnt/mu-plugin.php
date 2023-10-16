@@ -29,21 +29,21 @@ add_filter(
     4
 );
 
-// Prvent modify the update check for plugins
-add_filter('site_transient_update_plugins', 
-	function ($value) use ($mu_plugins_to_protect)
-	{
+// Prevent modify the update check for plugins
+add_filter(
+    'site_transient_update_plugins', 
+    function ($value) use ($mu_plugins_to_protect) {
 
-		foreach($mu_plugins_to_protect as $plugin){
-			if(isset($value->response[$plugin])) {
-				unset($value->response[$plugin]);
-			}
-		}
+        foreach($mu_plugins_to_protect as $plugin){
+            if(isset($value->response[$plugin])) {
+                unset($value->response[$plugin]);
+            }
+        }
 
-		return $value;
-	},
-	10,
-1
+        return $value;
+    },
+    10,
+    1
 );
 
 /**

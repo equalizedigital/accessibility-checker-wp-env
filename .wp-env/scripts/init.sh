@@ -7,7 +7,7 @@ npx wp-env run tests-wordpress sudo apt install iptables -y
 npx wp-env run tests-wordpress sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 8889 -j REDIRECT --to-port 80
 
 #activate AC plugins on dev
-source ./wp-env/cfg/.env
+source .wp-env/cfg/.env
 npx wp-env run cli wp option update edacp_license_key $LICENSE
 
 npx wp-env run cli wp plugin activate accessibility-checker
