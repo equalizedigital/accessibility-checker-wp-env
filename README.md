@@ -32,10 +32,9 @@ Run `npm install` from the plugin folder.
 #Require valid-user
 ```
 
-3. The `wp:init` script can automatically fill the Accessibility Checker Pro license key. To setup,
+3. The install script can automatically fill the Accessibility Checker Pro license key. To setup,
 update `./wp-env/cfg/env.txt` with the license to use and rename the file `.env`
 
-
-
+You can apply your changes by re-running `npm install`.
 
 

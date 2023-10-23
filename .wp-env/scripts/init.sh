@@ -10,8 +10,9 @@ npx wp-env run tests-wordpress sudo iptables -t nat -A OUTPUT -o lo -p tcp --dpo
 env_file=".wp-env/cfg/.env"
 if [ -f "$env_file" ]; then
     source "$env_file"
+    npx wp-env run cli wp option update edacp_license_key $LICENSE
 fi
-npx wp-env run cli wp option update edacp_license_key $LICENSE
+
 
 #activate AC plugins on dev
 npx wp-env run cli wp plugin activate accessibility-checker
