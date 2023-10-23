@@ -11,8 +11,14 @@ env_file=".env"
 if [ -f "$env_file" ]; then
     source "$env_file"
     npx wp-env run cli wp option update edacp_license_key $LICENSE
+    npx wp-env run tests-cli wp option update edacp_license_key $LICENSE
 fi
 
+#setup auth username/password
+npx wp-env run cli wp option update edacp_authorization_username admin
+npx wp-env run cli wp option update edacp_authorization_password password
+npx wp-env run tests-cli wp option update edacp_authorization_username admin
+npx wp-env run tests-cli wp option update edacp_authorization_password password
 
 #activate AC plugins on dev
 npx wp-env run cli wp plugin activate accessibility-checker
