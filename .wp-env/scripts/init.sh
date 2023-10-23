@@ -7,7 +7,7 @@ npx wp-env run tests-wordpress sudo apt install iptables -y
 npx wp-env run tests-wordpress sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 8889 -j REDIRECT --to-port 80
 
 #source the .env file
-env_file=".wp-env/cfg/.env"
+env_file=".env"
 if [ -f "$env_file" ]; then
     source "$env_file"
     npx wp-env run cli wp option update edacp_license_key $LICENSE
