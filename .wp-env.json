@@ -6,7 +6,8 @@
     "plugins": [] ,
     "mappings": {
         "wp-content/mu-plugins/accessibility-checker-mu-plugin.php": "./.wp-env/mnt/mu-plugin.php",
-        "./../../../mnt/": "./.wp-env/mnt/"
+        "./../../../mnt/": "./.wp-env/mnt/",
+        ".htpasswd": "./.wp-env/cfg/htpasswd.txt"
     },
     "env": {
         "development": {
