@@ -20,6 +20,15 @@ npx wp-env run cli wp option update edacp_authorization_password password
 npx wp-env run tests-cli wp option update edacp_authorization_username admin
 npx wp-env run tests-cli wp option update edacp_authorization_password password
 
+#configure debug settings for dev and tests instances
+npx wp-env run cli wp config set WP_DEBUG true --raw
+npx wp-env run cli wp config set WP_DEBUG_LOG true --raw
+npx wp-env run cli wp config set WP_DEBUG_DISPLAY true --raw
+
+npx wp-env run tests-cli wp config set WP_DEBUG true --raw
+npx wp-env run tests-cli wp config set WP_DEBUG_LOG true --raw
+npx wp-env run tests-cli wp config set WP_DEBUG_DISPLAY true --raw
+
 #activate AC plugins on dev
 npx wp-env run cli wp plugin activate accessibility-checker
 npx wp-env run cli wp plugin activate accessibility-checker-pro

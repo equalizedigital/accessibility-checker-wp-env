@@ -6,7 +6,6 @@
     "plugins": [] ,
     "mappings": {
         "wp-content/mu-plugins/accessibility-checker-mu-plugin.php": "./.wp-env/mnt/mu-plugin.php",
-        ".htpasswd": "./.wp-env/cfg/htpasswd.txt",   
         "./../../../mnt/": "./.wp-env/mnt/"
     },
     "env": {
@@ -17,6 +16,7 @@
                 "wp-content/plugins/accessibility-checker": "./../accessibility-checker/",
                 "wp-content/plugins/accessibility-checker-pro": "./../accessibility-checker-pro/",   
                 "wp-content/plugins/accessibility-checker-audit-history": "./../accessibility-checker-audit-history/",
+                "wp-content/debug.log" : "./.wp-env/logs/debug.log",
                 ".htaccess": "./.wp-env/cfg/htaccess.txt"
             }          
         },
@@ -24,8 +24,8 @@
             "port": 8889,
             "plugins": [],
             "mappings": {
-                "source": "./",
                 "wp-content/plugins": "./.wp-env/plugins",
+                "wp-content/debug.log" : "./.wp-env/logs/debug.log",
                 ".htaccess": "./.wp-env/cfg/htaccess.txt"
             }
         }
