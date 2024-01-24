@@ -26,6 +26,7 @@
             "port": 8889,
             "plugins": [],
             "mappings": {
+                "source": "./",
                 "wp-content/plugins": "./.wp-env/plugins",
                 "wp-content/logs" : "./.wp-env/logs",
                 ".htaccess": "./.wp-env/cfg/htaccess.txt"
