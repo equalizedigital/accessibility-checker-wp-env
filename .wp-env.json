@@ -1,9 +1,4 @@
 {
-    "config": {
-        "WP_DEBUG": true,
-        "WP_DEBUG_LOG": "/var/www/html/wp-content/logs/debug.log",
-        "WP_DEBUG_DISPLAY": true
-      },
     "plugins": [] ,
     "mappings": {
         "wp-content/mu-plugins/accessibility-checker-mu-plugin.php": "./.wp-env/mnt/mu-plugin.php",
@@ -20,16 +15,28 @@
                 "wp-content/plugins/accessibility-checker-audit-history": "./../accessibility-checker-audit-history/",
                 "wp-content/logs" : "./.wp-env/logs",
                 ".htaccess": "./.wp-env/cfg/htaccess.txt"
-            }          
+            },
+            "config": {
+                "WP_DEBUG": true,
+                "WP_DEBUG_LOG": "/var/www/html/wp-content/logs/dev_debug.log",
+                "WP_DEBUG_DISPLAY": true
+            }                    
         },
         "tests": {
             "port": 8889,
             "plugins": [],
             "mappings": {
+                "source": "./",
                 "wp-content/plugins": "./.wp-env/plugins",
                 "wp-content/logs" : "./.wp-env/logs",
                 ".htaccess": "./.wp-env/cfg/htaccess.txt"
+            },
+            "config": {
+                "WP_DEBUG": true,
+                "WP_DEBUG_LOG": "/var/www/html/wp-content/logs/tests_debug.log",
+                "WP_DEBUG_DISPLAY": true
             }
+ 
         }
     }
 }
