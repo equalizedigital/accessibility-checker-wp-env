@@ -27,6 +27,9 @@ npx wp-env run cli wp plugin activate accessibility-checker-audit-history
 
 #install dev plugins on dev
 npx wp-env run cli wp plugin install query-monitor --activate
+npx wp-env run cli wp plugin install jsm-show-user-meta --activate
+npx wp-env run cli wp plugin install jsm-show-user-meta --activate
+
 
 #deactivate AC plugins on tests so we have a clean slate
 npx wp-env run tests-cli wp plugin deactivate accessibility-checker
